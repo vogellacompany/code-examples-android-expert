@@ -1,11 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'idea'
-
-idea {
-    module {
-        downloadSources = true
-    }
-}
 
 android {
     compileSdkVersion 23
@@ -17,6 +10,11 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        jackOptions {
+            enabled true
+        }
+
     }
     buildTypes {
         release {
