@@ -217,9 +217,9 @@ public class lessonA_CreatingObservableStreams {
 		 * http://reactivex.io/documentation/operators/do.html
 		 */
 		Observable<Integer> numbers = Observable.range(1, 10).doOnNext(integer -> mSum += integer);
+		// TODO make the numbers observable emits its data
 		// Hint: what would we need to do to get our Observable to start
 		// emitting things?
-		numbers.subscribe(testObserver);
 		assertThat(mSum).isEqualTo(_____);
 	}
 
