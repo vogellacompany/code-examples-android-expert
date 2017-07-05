@@ -29,7 +29,10 @@ public class BooksActivity extends AppCompatActivity {
     }
 
     private void createObservable() {
-        //TODO
+        // TODO Create a Observable via Observable.fromCallable()
+        // using restClient.getFavoriteBooks
+        // Subscribe to it on the correct threads and call in the subscription
+        // displayBooks() with the result of the subscription
     }
 
     @Override

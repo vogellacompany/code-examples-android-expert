@@ -25,7 +25,14 @@ public class ColorsActivity extends AppCompatActivity {
     }
 
     private void createObservable() {
-        //TODO
+        //TODO create a observable based on the result of getColorList()
+        // subscribe to it via a lambda expression (Consumer)
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // TODO dispose subscription
     }
 
     private void configureLayout() {

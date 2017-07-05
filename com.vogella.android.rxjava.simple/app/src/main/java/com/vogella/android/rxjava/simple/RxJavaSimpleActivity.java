@@ -16,7 +16,7 @@ public class RxJavaSimpleActivity extends AppCompatActivity {
 
     RecyclerView colorListView;
     SimpleStringAdapter simpleStringAdapter;
-    CompositeDisposable disposable = new CompositeDisposable();
+    CompositeDisposable disposables = new CompositeDisposable();
     public int value =0;
 
     final Observable<Integer> serverDownloadObservable = Observable.create(emitter -> {
@@ -30,7 +30,12 @@ public class RxJavaSimpleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxjavasimple);
         View view = findViewById(R.id.button);
-        // TODO build observable
+        // TODO if button is clicked you should subscribe on
+        // the Schedulers.io() thread to the serverDownloadObservable
+        // and observe it on the AndroidSchedulers.mainThread() thread
+        // in the subscribe method call updateTheUserInterface
+        // Assign the result to a Disposable and add this to the disposables field
+
     }
 
     private void updateTheUserInterface(int integer) {
